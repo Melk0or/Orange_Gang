@@ -1,0 +1,114 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	padding: 0 10px;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.headerCenter h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	color: wheat;
+}
+
+.headerCenter {
+	display: flex;
+	align-items: center;
+}
+
+.headerLeft {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.headerBurgerContainer {
+	border: 3px solid white;
+	border-radius: 5px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	transition: transform 0.3s ease-in;
+}
+
+.headerBurgerContainer:hover {
+	scale: 1.01;
+}
+
+.active span:nth-child(1) {
+	transform: rotate(45deg) translate(9px, 9px);
+	background-color: wheat;
+}
+
+.active span:nth-child(2) {
+	transform: rotate(45deg);
+	opacity: 0;
+	background-color: wheat;
+}
+
+.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(9px, -9px);
+	background-color: wheat;
+}
+
+.active {
+	border: 3px solid wheat;
+	border-radius: 5px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	transition: all 0.2s ease-in;
+}
+
+.active:hover {
+	scale: 1.01;
+}
+
+.headerBurgerContainer span,
+.active span {
+	display: block;
+	height: 2px;
+	margin-right: 5px;
+	margin-left: 5px;
+	border-radius: 25px;
+	background-color: white;
+	transition: all 0.2s ease-in;
+}
+
+.headerIcon img {
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+	filter: invert(1);
+}
+
+.headerRight {
+	display: flex;
+	img {
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		filter: invert(1);
+	}
+	display: flex;
+	align-items: center;
+	gap: 55px;
+	transition: all 0.2s ease;
+}
+
+.headerRight *:hover {
+	scale: 1.01;
+}
